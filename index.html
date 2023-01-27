@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style>
+		#date{
+			margin-top: 1em;
+			font-size:1.6em;
+		}
+
+		table, tr, td {
+			border:1px solid #000000;
+		}
+
+		td div {
+			width: 100px;
+			height: 100px;
+			cursor:pointer;
+			user-select: none;
+		}
+
+		td div:hover {
+			background-color: #e6f2da;
+		}
+
+		#sat1, #sat2, #sat3, #sat4, #sat5, #sat6 {
+			background-color: #a6dde2;
+		}
+
+		#sun1, #sun2, #sun3, #sun4, #sun5, #sun6 {
+			background-color: #e6ccda;
+		}
+
+		#sat1:hover {
+			background-color: #e6f2da ;
+		}
+
+		#date {
+			user-select: 'none';
+		}
+
+	</style>
+	<title>カレンダー</title>
+</head>
+<body>
+	<center>
+		<h1>予約カレンダー</h1>
+		<div id="date"></div>
+		<table>
+			<tr>
+				<td>
+					Monday
+				</td>
+				<td>
+					Tuesday
+				</td>
+				<td>
+					Wednesday
+				</td>
+				<td>
+					Thursday
+				</td>
+				<td>
+					Friday
+				</td>
+				<td>
+					Saturday
+				</td>
+				<td>
+					Sunday
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="mon1" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="tue1" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="wed1" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="thu1" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="fri1" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="sat1" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="sun1" onclick="jump(this.id);"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="mon2" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="tue2" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="wed2" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="thu2" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="fri2" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="sat2" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="sun2" onclick="jump(this.id);"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="mon3" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="tue3" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="wed3" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="thu3" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="fri3" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="sat3" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="sun3" onclick="jump(this.id);"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="mon4" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="tue4" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="wed4" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="thu4" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="fri4" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="sat4" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="sun4" onclick="jump(this.id);"></div>
+				</td>
+			</tr>
+			<tr id="fifth">
+				<td>
+					<div id="mon5" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="tue5" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="wed5" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="thu5" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="fri5" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="sat5" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="sun5" onclick="jump(this.id);"></div>
+				</td>
+			</tr>
+			<tr id="sixth">
+				<td>
+					<div id="mon6" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="tue6" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="wed6" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="thu6" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="fri6" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="sat6" onclick="jump(this.id);"></div>
+				</td>
+				<td>
+					<div id="sun6" onclick="jump(this.id);"></div>
+				</td>
+			</tr>
+		</table>
+	</center>
+	<script>
+		const dt = new Date();	//今日の日付クラスのインスタンス
+		const thisYear = dt.getFullYear();	//現在の西暦
+		const thisMonth = dt.getMonth();	//現在の月
+		let year = dt.getFullYear();	//カレンダー表示の西暦
+		let month = dt.getMonth();	//カレンダー表示の月
+		let firstDay;	//月初の曜日を取得
+		let lastDay;	//末日の日付を取得
+
+		makeCal(year,month);
+
+		function writeCal(){
+			let week = 1;	//何周目かを設定する変数
+			let date;	//曜日を設定する変数
+
+			if(firstDay % 7 == 1 && month == 1 && year % 4 != 0){
+				document.getElementById('fifth').style.display = "none";
+			}else{
+				document.getElementById('fifth').style.display = "table-row";
+			}
+
+			if((firstDay % 7 == 0 && lastDay == 30) || (firstDay % 7 == 6 && lastDay == 31) || (firstDay % 7 == 0 && lastDay == 31)){
+				document.getElementById('sixth').style.display = "table-row";
+			}else{
+				document.getElementById('sixth').style.display = "none";
+			}
+
+			for(var i = 1; i <= lastDay; i ++){
+				switch(firstDay % 7){
+					case 1:
+						date = 'mon';
+						break;
+					case 2:
+						date = 'tue';
+						break;
+					case 3:
+						date = 'wed';
+						break;
+					case 4:
+						date = 'thu';
+						break;
+					case 5:
+						date = 'fri';
+						break;
+					case 6:
+						date = 'sat';
+						break;
+					case 0:
+						date = 'sun';
+						break;
+				}
+				document.getElementById(date + week).innerText = i;
+				if(date == 'sun'){
+					week ++;
+				}
+				firstDay ++;
+			}
+			if(thisYear == year && thisMonth == month){
+				var preBtn = '';
+			}else{
+				var preBtn = '<a href="javascript:month --;makeCal();">前の月</a>　';
+			}
+			document.getElementById('date').innerHTML = preBtn + year + '年' + (month + 1) + '月　<a href="javascript:month ++;makeCal();">次の月</a>';
+		}
+
+		function delCal(){
+			for(var i = 1; i <= 6; i++){
+				document.getElementById('sun' + i).innerText = "";
+				document.getElementById('mon' + i).innerText = "";
+				document.getElementById('tue' + i).innerText = "";
+				document.getElementById('wed' + i).innerText = "";
+				document.getElementById('thu' + i).innerText = "";
+				document.getElementById('fri' + i).innerText = "";
+				document.getElementById('sat' + i).innerText = "";
+			}
+		}
+
+		function makeCal(){
+			if(month == 12){
+				year ++;
+				month = 0;
+			}else if(month == -1){
+				year --;
+				month = 11;
+			}
+			var date0 = new Date(year,month,1);	//今日の日付クラスのインスタンス
+			var date1 = new Date(date0.getFullYear(), date0.getMonth(), 1);	//月初の日付クラスのインスタンス
+			var date2 = new Date(date0.getFullYear(), date0.getMonth() + 1, 0);	//末日の日付クラスのインスタンス
+			firstDay = date1.getDay();	//月初の曜日を取得
+			lastDay = date2.getDate();	//末日の日付を取得
+			delCal();
+			writeCal();
+		}
+
+		function jump(id){
+			if(document.getElementById(id).innerText == ""){
+				return;
+			}else{
+				window.document.location.href = 'date.php?id=' + id;
+			}
+		}
+
+	</script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
